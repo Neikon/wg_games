@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1033"/>
+      <stop offset="0.5" stop-color="#2b0f4d"/>
+      <stop offset="1" stop-color="#0d1b3e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#ff2ea6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ff2ea6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vinyl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a3a4d"/>
+      <stop offset="1" stop-color="#101018"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <!-- confetti dots -->
+  <g opacity="0.8">
+    <circle cx="90" cy="120" r="6" fill="#ffd166"/>
+    <circle cx="1190" cy="100" r="7" fill="#06d6a0"/>
+    <circle cx="1100" cy="620" r="6" fill="#ffd166"/>
+    <circle cx="150" cy="600" r="7" fill="#06d6a0"/>
+    <circle cx="640" cy="80" r="5" fill="#ff2ea6"/>
+    <circle cx="150" cy="350" r="4" fill="#8ecae6"/>
+    <circle cx="1150" cy="350" r="4" fill="#8ecae6"/>
+  </g>
+  <!-- vinyl record -->
+  <g transform="translate(640,330)">
+    <circle r="170" fill="url(#vinyl)" stroke="#ff2ea6" stroke-width="6"/>
+    <circle r="150" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <circle r="130" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <circle r="110" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <circle r="52" fill="#ffd166"/>
+    <circle r="12" fill="#1a1033"/>
+    <!-- tone arm hint -->
+    <rect x="120" y="-170" width="14" height="150" rx="7" fill="#8ecae6" transform="rotate(25 127 -95)"/>
+  </g>
+  <!-- music notes -->
+  <g font-family="sans-serif" font-weight="bold">
+    <text x="380" y="240" font-size="110" fill="#06d6a0" transform="rotate(-12 380 240)">♪</text>
+    <text x="830" y="250" font-size="130" fill="#ffd166" transform="rotate(12 830 250)">♫</text>
+    <text x="300" y="450" font-size="80" fill="#ff2ea6">♩</text>
+    <text x="930" y="460" font-size="80" fill="#8ecae6">♩</text>
+  </g>
+  <!-- title -->
+  <g text-anchor="middle" font-family="sans-serif">
+    <text x="640" y="570" font-size="120" font-weight="900" letter-spacing="14" fill="#ffffff">HIPSTER</text>
+    <text x="640" y="625" font-size="40" font-weight="700" letter-spacing="6" fill="#ffd166">ADIVINA LA CANCIÓN 🎶</text>
+  </g>
+</svg>
