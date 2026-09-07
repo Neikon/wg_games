@@ -88,8 +88,13 @@ def main():
     if not url or not re.match(r"^https://\S+$", url):
         errors.append("La **URL del juego** debe empezar por `https://`.")
 
-    # Buscar imágenes pegadas (Ctrl+V) en cualquier parte del body
-    pasted = re.findall(r"!\[[^\]]*\]\((https://github\.com/user-attachments/assets/[^)]+)\)", body)
+    # Buscar imágenes pegadas (Ctrl+V) en cualquier parte del body.
+    # GitHub las renderiza como markdown ![...](url) o como <img src="url">.
+    pasted = re.findall(r"!\[[^\]]*\]\((https://github\.com/user-attachments/assets/[^)\s]+)\)", body)
+    pasted += re.findall(r'<img\b[^>]*\bsrc=["\'](https://github\.com/user-attachments/assets/[^"\')\s]+)["\']', body, re.I)
+    pasted += re.findall(r'(https://github\.com/user-attachments/assets/[^\s)<>"\']+)', body)
+    # dedup manteniendo orden
+    pasted = list(dict.fromkeys(pasted))
     # También por si la URL externa viene como markdown
     if not imagen_url:
         m = re.search(r"https?://\S+\.(?:png|jpe?g|webp|svg|gif)(\?\S*)?", captura or "", re.I)

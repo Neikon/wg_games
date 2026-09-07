@@ -4,7 +4,7 @@
     "nombre": "Hipster",
     "descripcion": "Adivina la canción.",
     "url": "https://neikon.github.io/wg_hipster/#/",
-    "imagen": "assets/placeholder.svg"
+    "imagen": "assets/hipster.png"
   },
   {
     "id": "ejemplo-quiz-fiesta",
