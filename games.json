@@ -1,5 +1,12 @@
 [
   {
+    "id": "hipster",
+    "nombre": "Hipster",
+    "descripcion": "Adivina la canción.",
+    "url": "https://neikon.github.io/wg_hipster/#/",
+    "imagen": "assets/placeholder.svg"
+  },
+  {
     "id": "ejemplo-quiz-fiesta",
     "nombre": "Quiz Fiesta (ejemplo)",
     "descripcion": "Juego de preguntas rápidas para romper el hielo. Bórrame cuando añadas el primero real.",
