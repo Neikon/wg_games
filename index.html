@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WG Party Games 🎉 — Catálogo de juegos para fiestas</title>
+  <meta name="description" content="Catálogo de juegos web multijugador para fiestas. Un solo link, siempre actualizado." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>🎉 WG Party Games</h1>
+      <p class="tagline">Juegos web multijugador para fiestas. Guarda este link: siempre es el mismo, aunque añadamos juegos.</p>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Buscar juego… (ej: dibujar, beber, equipos)" autocomplete="off" />
+        <a class="btn" href="https://github.com/Neikon/wg_games/issues/new?template=a%C3%B1adir-juego.yml" target="_blank" rel="noopener">＋ Pedir / añadir juego</a>
+      </div>
+      <p class="count" id="count"></p>
+    </div>
+  </header>
+
+  <main>
+    <div id="grid" class="grid" aria-live="polite"></div>
+    <template id="card-template">
+      <article class="card">
+        <a class="card-link" target="_blank" rel="noopener">
+          <img class="card-img" loading="lazy" alt="" />
+          <div class="card-body">
+            <h2 class="card-title"></h2>
+            <p class="card-desc"></p>
+            <span class="card-cta">Jugar →</span>
+          </div>
+        </a>
+      </article>
+    </template>
+    <noscript><p style="text-align:center">Activa JavaScript para ver el catálogo.</p></noscript>
+  </main>
+
+  <footer>
+    <p>¿Tienes un juego? <a href="https://github.com/Neikon/wg_games/issues/new?template=a%C3%B1adir-juego.yml" target="_blank" rel="noopener">Pégalo en un issue con Ctrl+V</a> y aparece aquí solo. 🥳</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

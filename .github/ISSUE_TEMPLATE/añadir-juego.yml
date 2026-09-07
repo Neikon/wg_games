@@ -1,0 +1,54 @@
+name: Añadir juego 🎮
+description: Añade un juego al catálogo. Puedes pegar una captura con Ctrl+V directamente en la descripción.
+title: "[juego] "
+labels: ["nuevo-juego"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Cómo añadir un juego en 30 segundos
+        1. Rellena nombre, descripción y link.
+        2. Para la imagen tienes 2 opciones:
+           - **Opción fácil (recomendada):** haz una captura del juego y **pégala con Ctrl+V** en el campo "Captura / imagen" de abajo. El bot la guardará solo en `assets/`.
+           - O pega una URL de imagen (`https://...png/jpg/webp/svg`).
+        3. Crea el issue. Un GitHub Action lo validará y lo añadirá a `games.json` solo. ✨
+
+  - type: input
+    id: nombre
+    attributes:
+      label: Nombre del juego *
+      placeholder: "Ej: Dibujo rápido"
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción corta *
+      description: Máx 140 caracteres. Lo que verá la gente en la tarjeta.
+      placeholder: "Dibuja y adivina con el móvil, ideal para 4-10 personas."
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL del juego *
+      description: Tiene que empezar por https://
+      placeholder: "https://mi-juego.example.com"
+    validations:
+      required: true
+
+  - type: input
+    id: imagen_url
+    attributes:
+      label: URL de imagen (opcional si pegas captura abajo)
+      description: Imagen externa. Si lo dejas vacío, usaremos la captura pegada.
+      placeholder: "https://.../portada.png"
+
+  - type: textarea
+    id: imagen
+    attributes:
+      label: Captura / imagen (pega aquí con Ctrl+V) 📸
+      description: Haz captura del juego y pégala aquí con Ctrl+V. GitHub la subirá como adjunto y el bot la guardará en assets/. Si ya pusiste URL arriba, puedes dejar esto vacío.
+      placeholder: "Pega tu captura aquí con Ctrl+V…"

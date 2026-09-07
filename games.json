@@ -1,0 +1,9 @@
+[
+  {
+    "id": "ejemplo-quiz-fiesta",
+    "nombre": "Quiz Fiesta (ejemplo)",
+    "descripcion": "Juego de preguntas rápidas para romper el hielo. Bórrame cuando añadas el primero real.",
+    "url": "https://example.com",
+    "imagen": "assets/placeholder.svg"
+  }
+]

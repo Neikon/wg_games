@@ -1,0 +1,13 @@
+{
+  "name": "wg_games dev",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "customizations": {
+    "vscode": {
+      "extensions": ["GitHub.vscode-github-actions", "esbenp.prettier-vscode"]
+    }
+  },
+  "forwardPorts": [8000],
+  "portsAttributes": { "8000": { "label": "catálogo local", "onAutoForward": "notify" } },
+  "postCreateCommand": "python3 --version && echo 'Sirve con: python3 -m http.server 8000'",
+  "remoteUser": "vscode"
+}
